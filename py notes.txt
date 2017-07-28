@@ -1,0 +1,166 @@
+                string
+=============================================
+-- strings can be enclosed in single quotes or double quotes 'asdfds' "agfdg"
+-- print(r'C:\ndsf\dfd')  # raw string
+-- string literals spanning multiple lines """....""", endl is auto included but can be prevented by \
+-- a * 'a' + b   # aaab
+-- "python"[2] # t
+-- string slicing is supported: word[i:j] # i included but j excluded
+	word[:2], word[2:]
+	word[-2:] # from second-last to the end
+-- strings are immutable
+-- len(s) # built-in
+
+                  list
+===========================================
+-- list can hold items of different types but usually the same
+-- squares = [1,4,9,16,25]
+-- it also supports slicing, slicing returns a new list
+-- list also supports concatenation: squares + [36, 49, 64]
+-- lists are mutable: squares[3] = 25
+-- squares.append(9 ** 2)
+-- assignemnt to slices:  squares[0:2] = [1,2,3]
+	remove: squares[2:5] = []
+-- len(squares)
+-- list.extend(list1) # extend list by appending all elements of list1
+-- list.insert(i,x) # insert x right before list[i]
+-- list.remove(x)  # remove the first item equal to x, if no x found, throw error
+-- list.pop([i])  # delete the ith item and return it, if no i speciied, delete the last one
+-- list.clear()  
+-- list.reverse()
+-- list.count(x)
+-- list.sort()
+-- list can be used as stacks
+	stack = [1,2,3,4,5]
+	stack.append(6)
+	stack.pop()
+-- list can be used as queue as well
+	from collections import deque # deque has fast appends and pops from both ends
+	queue = deque(["wenzhe", "jiang", "morgan", "stanley"])
+	queue.append("waterloo")
+	queue.popleft() # deletes "wenzhe"
+-- squares = list(map(lambda x: x ** 2, range(10)))
+-- squares = [x**2 for x in range(10)]
+-- combs = [(x,y) for x in [1,2,3] for y in [3,1,4] if x != y]
+	this is equal to:
+	combs = []
+	for x in [1,2,3,]:
+		for y in [3,1,4]:
+			if x != y:
+				combs.append((x,y))
+	the order of "for" and "if" is the same in both 
+-- del a[0] # delete by index and not return
+	also works for slicing: del a[2:4]   
+	del a # delete entire list 
+
+	
+
+
+                 flow control
+==============================================
+-- multiple assignment: a, b = 0 , 1 # a = 0; b = 1
+	a , b = b, a + b
+-- print("asdf", end = ',') # end is newline by default
+-- x = int(input("enter a number; "))
+-- elif is short for else if
+-- words = ["afd", "dfgf", "adsfd", "sadf"]
+	for w in words:
+		do stuff
+-- for i in range(5):
+		print(i) # print 0 to 4 
+	for i in range(3,6): # 3,4,5
+	range(0, 10, 3): 0, 3, 6, 9
+	range(-1, -10, -3): -1, -4, -7
+	for i in range(len(words))
+-- list(range(5)): [0,1,2,3,4]
+-- pass: it does nothing, can be used when a statement is needed but no actual action is required
+	more of a place holder
+	
+	              functions
+===================================================
+-- def func(a, b = 4, c = "haha"): # it supports default parameters
+-- default value is only evaluated once
+	def f(a, l = []):
+		l.append(a)
+		return l
+	f(1) #[1]
+	f(2) #[1, 2]
+	like a static variable within a function?
+-- functions support keyword arguments
+	func(arg1 = 1, arg2 = "adgf")
+	func(arg2 = "asdg", arg1 = 12)
+
+
+                        Tuples
+====================================================
+-- t = 23,234,'hello'  # no brackets needed
+-- u = ("fd", 12,12), t # nested, tuple of tuple
+-- tuples are immutable
+	t[0] = 1  #error, does not support item assignment 
+-- construction of tuples containing 0 or 1 item
+	t = ()
+	t = ('hello',) or t = 'hello',
+-- tuple unpacking
+	x,y,z = t
+	x,y,z = (1,2,3)
+
+	                    sets
+======================================================
+-- unordered collection without duplicate
+-- basket = {'Amy', 'Joey', 'Apple', 'Orange', 'Apple'}
+-- use set() or {} to create sets
+-- but empty set must be created by set()
+-- 'Amy' in basket
+-- set operations
+	a = set('abracadabra')  # {'a', 'r', 'b', 'c', 'd'}
+	b = set('alacazam')  # {'a','l','c','z','m'}
+	a - b # in a but not in b 
+	a | b # union of two sets
+	a & b # intersection 
+	a ^ b # in a or b but not both
+	
+	                dictionaries
+======================================================
+-- key can only be immutable type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+Step by step instructions about how to use SWIG on a minimal C++ to Java example:
+
+Suppose now you already have a C++ project containing the following files:
+
+myException.h (defines a new type of exception derived from std::runtime_error)
+func.h, func.cpp  (defines a function that takes an int and print it or throw myException)
+
+Step 1: Writing the SWIG interface file funcWrapper.i
+Step 2: Call SWIG on command line and obtain the generated wrapper file funcWrapper.cxx and Java files
+Step 3: Compile C++: Add the wrapper file to the C++ project and build to produce a dll
+Step 4: Compile Java and make it into a jar if necessary
+
