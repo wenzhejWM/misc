@@ -1,0 +1,53 @@
+Two sigma:
+--- graph search and dynamic programming
+--- construct a median heaps  
+--- friend circle question, can be found on leetcode
+--- construct a median heaps  
+--- the difference between a thread and a process.  
+--- Sample from unit disc using one random variable.
+Solve Gaussian quantile by newtons method
+Remove minimum number of paranthesis to make expression valid ([{
+Uniformly sample the superset of a set of integers (solved by uniform sampling then sort), the input is a vector and the output is vector of vectors
+Find the number of integer solutions to a linear inequality equation ( recursion)
+Given two sorted vectors, find a threshold, if greater categorize to A otherwise to B. Find minimum classification errors (use binary search. Actually use a binary search on top of a binary search is even better)
+Merge sort, but each merge are k to 1 instead of 2 to 1, heap)
+Three people play a game, 2 color hats, can only see other people's black or white hat. If at least one wins and nobody loses, win. what's your strategy. (75%, for more general case, look at hamming code)
+If anual sharpe 8 but loses money, how many days needed to tell statistical significance.
+How do you tell if a stock delta price series is reverted in time ( volatility increase sharply and decrease slowly)
+How to do weighted linear regression (just weight the terms in summation...)  
+
+--- What is a template? Can you separate the interface and the implementation parts, why?  
+	What is a virtual function and how it works?  vtable vpointer
+
+--- power of 4
+	boolean powerOf4(long v) {
+        return ((v & (v - 1)) == 0) && ((v & 0x55555555) != 0);
+    }
+--- Two dynamic programming questions.  
+--- priority queue implementation. 
+	where to include build-heap, insert, deletion, top, pop
+--- Singleton and factory pattern
+--- hashtable implementation
+--- Implement a merge sort in place
+--- Imagine a game with a sequence of numbers. Each player can take either the head or tail element on any given turn. The player adds that number to their total score. Assuming both players play optimally, what's the maximum score that can be achieved by any player?  
+--- Define an objective function for a factor-based quantitative portfolio model.  
+--- find  the longest string chain possible given a dictionary of words.
+--- regular expression matching
+	write a function to auto generate test cases
+--- postfix notation calculator
+--- string compression
+--- Pros/cons of merge sort and quick sort
+--- find all palindromes in a string
+--- extend your implementation of reverse Polish notation to include more operators
+--- Find max benefit from 2 transactions given some stock prices
+--- LRU
+--- Explain the software development cycle.  
+--- Given a portfolio made up of equal parts of two assets that have covariance of y and each of which have x volatility, what is the overall portfolio volatility?  
+--- Make sure you can solve those at difficult level on HackRank
+--- write a string class in C++
+--- How many publicly traded stocks do you think there are?  
+--- Bitwise Operation, Add one to a number without using +
+--- Find all the subsets of size k 
+--- You have two time series Xt and Yt. You do a regression of Y over X and get coefficient \beta, t-stats and R2. Now you double the size of the original series with original data and do the regression with new \beta, t-stats and R2. How will \beta, t-stats and R2 change?
+--- given an array of size n, find the fastest way to find maximum and minimum element. 
+--- Two questions for the coding test, one involving pure coding and the other involving some data analysis.

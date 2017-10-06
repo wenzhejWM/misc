@@ -1,0 +1,66 @@
+D.E.Shaw
+(weakness: puzzles with hypothesis testing)
+(weakness: 300 line code sample)
+(weakness: priority queue implementation)
+
+- research; brain teaser / probability puzzles
+- CS interview with focus on math type problems, coding test via online editor
+- How does Kerberos work?  
+- Diff btw that and bash shell.  
+- including brain teasers, statistics, probability, algorithm and programing. They all write in Python but you can choose your own language
+- why choosing their company and tell me about the work environment.
+- hypothesis testing, regression, prob
+- why are some things that work in c++ don't work in c
+- how do you get the largest product of three numbers out of an array.
+- what's the probability that you randomly choose three points on a circle and these three points would be covered by a semi-circle
+- brainteasers (algorithms, black-scholes, arbitrage-free pricing, statistics, order-of-magnitude estimations)
+- code sample
+- Which is more: a) the number of stars in our galaxy, or b) the number of grains of sand that will fit in a 5 gallon bucket.
+  How do you estimate both (a) and (b) using reasonable assumptions that a normal lay-person could verify/agree-with?  
+
+- Flip a fair coin 1000 times. What's the probability that the number of heads come up more than 550 times? What theorem would you use to describe probabilities of rare events as number of coin flips goes to infinity?  Poisson limit theorem  0.070%
+
+- 1) Let A be an n by n matrix, with all off-diagonal entries equal to a, and all diagonal entries equal to 1. For which value of a, is this matrix positive definite?
+  (2) We start with a number n, and let S = 0. At the first step
+  What number do we end up with?
+  (3) Suppose we have a fair coin, and we toss it a million times. Let X be the number of heads; estimate the probability that X > 502,000.
+  (4) You are given two Gaussian variables: X_1 and X_2 with means m_1, m_2 and variance v_1, v_2.
+
+   Suppose you know the sum X_1 + X_2 is equal to n. What is the expected value of X_2?  
+   Answer: https://www.glassdoor.com/Interview/-4-You-are-given-two-Gaussian-variables-X-1-and-X-2-with-means-m-1-m-2-and-variance-v-1-v-2-Suppose-you-know-the-s-QTN_773356.htm
+
+--The brainteaser was a variation of the 100 coins and 5 pirates. There were 6 pirates instead. So the premise is that there are 6 pirates and you are the captain. 
+-- Consider an infinite set of pairwise independent random variables which are uniformly distributed between 0 and 1. What's the expected number that you need to add to get a number that exceeds 1.  
+	Define f_m(n) to be 1 if m=0, x_1+..+x_k<=1 which is 1/k!. There are various ways to prove it: one is that there unit hypercube can be decomposed into k! copies of it (e.g. the square equals two triangles, the cube equals 6 tetrahedrons etc.)
+-- If 3 of my friends have phone numbers ending (last four digits) in some permutation of 0,1,4, and 9 and I have 150 friends, then is that just a chance occurance?
+-- implement proirity queue  
+-- There are 10 open boxes containing 100 coins each. In 9 of these boxes the coins are made of gold, and in the other the coins are made of copper. You are given a large digital balance which can be used once only. Can you identify the box containing copper coins knowing the weight of both gold and copper coins?  
+-- You have many soccer teams, that will compete against each other in 5 rounds of elimination competitions until one team remains. You have 1000 dollars, how should you bet on each round of competition to ensure maximum profit?  
+-- What's the hardest bug that you've ever encountered?  
+-- The problems were interesting but not killer, involving dynamic programming and some combinatorial and probability calculations, and happened to draw on my strengths. 
+-- You are in a room with 100 lights, initially all off. If you first toggle every light, then every second, and so forth up to 100, which lights will be on at the end?  
+-- implementing a merge iterator in C++. 
+	 given a method foo(int a[4]). Write code to call foo with a = [0,0,0,0], [0,0,0,1],[0,0,0,2],[0,0,1,0],....,[2,2,2,2].
+- Given 2 classes of shapes (Rectangle, Circle) that inherits Shape and 2 classes of printers (BW, Color), that inherits Printer. Also given 4 methods:
+  --- PrintRecBW(Rectangle s,BW p)
+  --- PrintRecCol(Rectangle s,Col p)
+  --- PrintCirBW(Circle s,BW p)
+  --- PrintCirCol(Circle s,Col p)
+write a method to Print(Shape s, Printer p) to print out (s,p) using 4 methods above WITHOUT using "if". You are allowed to implement addition methods in given classes.
+
+-- (1) Can static method be overridden? Why?
+What is dangling reference?
+(2) Moved on to what happens when we access it.?
+(3) How to handle it? I said we can use reference count or std::auto_ptr to avoid dangling reference. He was happy with auto_ptr smart pointer concept.
+
+Largest BST in Binary Tree. Implemented this with O(n) time complexity.
+Implement phone dictionary. Gave solution using trie with hashing. Few discussions on it, but was happy at the end.  
+
+-- there was an online test on Hackerrank consisting of 12 question related to data structures and C - output based questions of medium difficulty level.
+	There were two programming question also:
+1)Standard stock-span problem.
+2)Fibonacci using matrix exponentiation.
+
+-- minimal spanning tree.It was pretty easy for those who are a bit comfortable with graphs.
+-- String rotation problem
+-- What is the duration of a bond? Why is the exponential function important in finance? Describe your background... How is your C++? Describe your research.

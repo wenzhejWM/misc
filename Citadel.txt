@@ -1,0 +1,30 @@
+Quant Research
+
+-- Questions on information theory, what is entropy, significance of bit  
+-- Statistics questions on random walks. 
+-- Find the minimum of x^x  
+-- linear regression, normality of (daily vs monthly) real stock returns, sorting algorithms
+-- You are holding two eggs in a 100-story building. If an egg is thrown out of the window, it will not break if the floor number is less than X, and it will always break if the floor number is equal to or greater than X. What strategy would you use to determine X with the minimum number of drops in a worst case scenario?  
+-- What sorting algorithms do you know? Advantages of each?
+-- What is the best way to model a response, y, given a large set of indicators, say x_1,...,x_100?
+-- What is the difference between GNB and logistic regression? Which one would you opt under different circumstances?  
+-- Binomial pricing, random walks and linear algebra. 
+-- Given log X ~ N(0,1). Compute the expectation of X.
+-- List Sorting. Probability.
+-- Expected number of rolls to see all six sides on a die,
+Describe all the C++ casts and their properties,
+Several questions on linear regression under different conditions  
+-- How do you estimate square root of 5?  
+--  a question about Linear programming
+-- Portfolio Optimization. No brain teasers. Some risk management related questions in the context of the resume. Some math and OR related questions. Vol related quesions.
+-- two ropes to measure 45 mins
+-- What wil the probability of an option endining up in the money change if the volatility of the underlying stock increases?  
+-- handling of large data
+-- Describe your the models and simulations you worked on in the past.  
+-- How many tennis balls are made in China each year?  
+-- three sum, closest, O(n^2)
+-- ou have a one meter ruler. We will drop 200 ants on to the ruler, each ant falling at a location along the ruler which is uniformly distrubuted. When an ant falls, it goes left or right with equal probability. When two ants bump into each other they reverse directions. Each ant moves along the string at a speed of 1 meter per minute. How long will it take for all the ants to fall off the ruler?
+-- Chance of seeing star in 1 hour is 60%. What is the chance seeing star in half an hour? 37%
+
+Software Engineer
+
