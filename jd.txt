@@ -1,0 +1,31 @@
+Position Description
+
+Our team has built a strategic cross-asset valuation risk computation framework for our Fixed Income businesses.
+
+We are looking for an experienced, proficient developer who is familiar pricing financial products. The position will entail integration, replacement and enhancement of analytics libraries as well as contributing to the design, implementation and optimization of the risk framework.
+
+ 
+
+Roles and Responsibilities Include:
+
+ 
+
+- integrate and optimize C++ analytics libraries' fit to our scala-based valuation and risk framework
+
+- develop analytics libraries where existing ones are difficult to integrate
+
+- refactor existing analytics libraries to improve API
+
+- analyze and optimize performance of realtime, intra-day and end of day risk computation
+
+- communicating with trading desk strategists and other stakeholders
+
+
+
+- excellent code development skills
+- strong exposure to financial valuation and risk methodologies
+- experience with risk computation/calibration optimization
+- exposure to building, delivering business critical valuation/risk systems and libraries
+- ability and willingness to learn new programming languages
+- strong oral and written communication skills
+- strong team working ability in local and global teams
