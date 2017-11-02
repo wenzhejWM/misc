@@ -118,19 +118,53 @@
 	a | b # union of two sets
 	a & b # intersection 
 	a ^ b # in a or b but not both
+-- basket.add('haha')
+-- basket.remove('haha')
 	
 	                dictionaries
 ======================================================
 -- key can only be immutable type
+-- dict = {'cat': 4, 'dog': 8}
+	print(dict['cat']) # 4
+	'cat' in d  # true
+	dict['fish'] = 5  #add a new entry
+	del dict['fish']  # deelte entry
+	dict.get('monkey', 'non-existence')   # if monkey does not exist, return 'non-ex...'
+-- traverse dictionary
+	for d in dict:
+		print(dict[d])
+		
+	for dkey, dval in d.items():
+		print('key is %s and value is %s' % (dkey, dval))
+
+-- dictionary comprehension:
+	nums = [1,2,3,4,5]
+	dict = [x: x**2 for x in nums if x%2==0]
+
+
+                    modules
+======================================================
+-- import fibo # fibo.py contains two functions: fib, fib2
+   usage: fibo.fib
+-- from fibo import fib, fib2
+	usage: fib
+-- from fibo import *
+-- dir() #names defined 
 
 
 
 
+                       Numpy: Arrays
+=======================================================
+--- import numpy as np 
+--- a = np.array([1,2,3])
+	print(a.shape)
+	print(type(a))
+	print(a[0], a[2])
+--- b = np.array([[1,2,3],[4,5,6]])  # two dimensional arrays
 
-
-
-
-
+--- 
+	
 
 
 
