@@ -163,10 +163,88 @@
 	print(a[0], a[2])
 --- b = np.array([[1,2,3],[4,5,6]])  # two dimensional arrays
 
+--- a = np.zeros((2,2))  # 2 by 2 all zero matrix
+	np.ones((1,2))  # 1 by 2 all ones
+	np.full((2,2), 7)  # 2 by 2 all 7
+	np.eye((2,2))   # 2 by 2 identity matrix
+	np.random.random((2,2))  # 2 by 2 random numbers
 --- 
 	
 
 
+============================ csv
+import csv
+
+%precision 2
+
+import pandas as pd
+pd.Series?
+
+initialization of a pandas seires:
+
+pd.Series(['tiger','dog','cat'])
+
+pd.Series([1,2,None])
+
+dtype
+object 
+int64
+float64
+
+import numpy as np
+np.nan
+
+s = pd.Series([1,2,3,4,5], index = ['a', 'b', 'c', 'd', 'e'])
+
+
+sports = {10: 'a', 11: 'b', 12: 'c', 13: 'd'}
+s = pd.Series(sports)
+s[key] can work, but when the indices are not ordered from 0 then it would create a mess
+
+s.iloc[]
+s.loc[]
+
+np.sum is faster than sum
+
+np.sum(s) adds up all the values in the Series
+
+vectorization is much faster than iterative
+%%timeit -n 100
+for a cel
+s+=2
+
+
+for label, value in s.iteritems():
+	s.set_value(label, value+2)
+equivalent to s+=2
+
+s = pd.Series(np.random.randint(0,10000,10000))
+
+concatenate two series
+
+s1 
+s2
+s1.append(s2)
+
+it does not change neither s1 not s2, instead it creates another series
+
+each series is a row of a table
+
+purchase_1 = pd.Series({'Name': 'Chris', 
+						'Item purchased': 'Dog food',
+						'Cost': 2.5})
+					
+df = pd.Dataframe([purchase_1, purchase_2, purchase_3], index = ['Store1', 'Store2', 'Store2'])
+df.head()
+
+
+names_ids = df.index.str.split('\s\(') # split the index by '('
+
+df.index = names_ids.str[0] # the [0] element is the country name (new index) 
+df['ID'] = names_ids.str[1].str[:3] # the [1] element is the abbreviation or ID (take first 3 characters from that)
+
+df = df.drop('Totals')
+df.head()
 
 
 

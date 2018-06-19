@@ -1,0 +1,154 @@
+--- select column1, column2 from table_name
+e.g. select name, city from Customers
+
+--- select * from table_name
+
+--- SELECT DISTINCT  Country FROM Customers
+
+--- SELECT COUNT(DISTINCT Country) FROM Customers
+
+--- select count(*) as distinctCountry
+	from (select distinct country from Customers)
+// this is to count the number of distinct countries in the table
+
+--- select col1, col2, col3
+	from table_name
+	where condition and condition2 or cond3
+	
+	select * from Customers
+	where Country = 'Mexico'  // single quote required
+	
+	=, <>, >, <, >=, <=, between, LIKE, IN
+	and, or, not
+	
+	where country='us' and city='ny'
+	where not country='germany' and not country='us'
+	
+--- select * from Customers
+	order by Country desc // or asc
+	
+	select * from Customers
+	order by country ASC, CustomerName Desc
+	
+--- select min(price) as minPrice  // max, avg, sum apply
+	from products
+	
+--- two wildcards
+	% represents any number of characters 
+	_ single char
+	
+--- select * from Customers
+	where name like 'J%'  // names starting with J
+	// 'a_%_%' : starting with a and have at least 3 chars
+	// 'a%o': starting with a, ending with o
+	// like '[bsp]%' : starting with one of bsp
+	// like '[a-c]%' : starting with small letter
+	// like '[!bsp]%' : not starting with bsp
+	select * from Customers
+	where name not like 'a%'  // not like
+	
+--- select * from Customers
+	where name in ('jack', 'joey', 'damaris')
+	//or 
+	where name in (select name from Suppliers)
+	
+--- select prices from Products
+	where prices between 10 and 29 // inclusive on both ends
+	// where prices not between 10 and 29
+	// where (price between 10 and 20)
+	   and not category in (1,2,3)
+	// where date between #07/04/1996# and #07/09/1996#
+	
+--- column alias
+	select coloumn_name as alias_name
+	from table_name
+	
+--- table alias 
+	select coloumn_name
+	from table_name as alias_name
+	
+--- select CustomerName as Name, Address + ', ' + Zipcode + ', ' + City as Address
+	from Customers
+	// combine 3 columns (address, zipcide, city) as Address
+	// or:  CONCAT(Address,', ','Zipcode',', ',City) as Address
+	
+--- select o.OrdersID, o.OrderDate, c.CustomerName
+	from Customer as c, Orders as o
+	where c.CustomerName='Wenzhe' and c.CustomerID = o.CustomerID
+	
+--- aliases are used usually when 
+	1. multiple tables
+	2. combine columns into one
+	3. functions are used
+	4. column names are long or not readable
+	
+--- INSERT INTO table_name(col1, col2, col3)
+	VALUES(val1, val2, val3)
+	// or just some of the columns
+	INSERT INTO table_name(col1, col3)
+	VALUES(val1, val3)
+	// the other columns will be null
+	
+--- // about test NULL values
+	select col_name 
+	form table_name
+	where col_name IS NULL
+	//where col_name IS NOT NULL 
+	
+--- // update table
+	UPDATE table_name
+	SET	col1 = val1, col2 = val2
+	where col1 = something
+	// note that here it is required to have "where", otherwise all the records will be updated
+	
+--- DELETE from table_name
+	where CONDITION	
+	// delete all the rows:
+	delete * from table_name
+
+--- select top 5 col1
+	from table_name
+	where ..........
+	
+// joins (e.g., Orders, Customers)
+--- SELECT Orders.OrderID, Customer.CustomerName, Orders.OrderDate
+	from Orders
+	INNER JOIN Customers ON Orders.OrderID=Customer.CustomerID
+	
+	// join three tables
+	select table1.name, table2.col2, table3.col3
+	from (table1
+	INNER JOIN table2 ON table1.name=table2.name) // composite table
+	INNER JOIN table3 ON table2.time=table2.time
+	
+--- select table1.col1, table2.col2
+	from table1
+	left join table2 on table1.col1=table2.col1
+	// left join, takes all items in table1
+
+--- select table1.col1, table2.col2
+	from table1
+	right join table2 on table1.col1=table2.col1
+	// right join, takes all items in table2
+	
+--- select table1.col1, table2.col2
+	from table1
+	FULL OUTER JOIN table2 on table1.col1=table2.col1
+	// full outer join, takes all items in table1 and table2
+	
+--- // self join, same as other joins, just alias the table with two aliases
+	// this query selects customer pairs from the same city
+	select A.name as name1, B.name as name2, A.city
+	from Customer as A, Customer as B // same table, two aliases
+	where A.CustomerID < B.CustomerID
+	and A.city=B.city
+	order by A.city
+	
+
+	
+
+
+
+
+	
+	

@@ -186,13 +186,21 @@ git reset soft $aboveResult // now reset based on the commit
 
 
 
+    given a new git repo, how to work on it
+-------------------------------------------------------
+1. fork the repo to my own repo and enable syncing
+2. choose a folder to put the code and cd to it, and then git clone ...
+3. create feature branch and start working on it
 
 
 
 
+--- git add -A  // stages all
+	git add .  // stages new and modified, without deleted
+	git add -u // stages deleted and modified, without new 
 
 
-
+fd59a7a3739f82ce3c4fe043d3fc7fa52bdc3090
 
 
 

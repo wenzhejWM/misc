@@ -1,0 +1,216 @@
+--- vim has two modes; insert and normal(command)
+	Esc for normal and i for insert
+--- arrows: hjkl
+--- word movement: bew
+	b: moves to the beginning of the word
+	e: moves to the end of the word
+	w: moves to the beginning of the next word
+--- number with movement: 
+	3w: www
+	9l: move right for 9 times
+--- insert text repeatedly
+	3igo Esc: insert go 3 times
+--- find a char with f and F
+	fw: find the next w
+	3fq: find the third occurrence of q
+--- % to find matching parenthesis, forward or backward
+--- 0 to the start of line, $ the end
+--- * to find the next word under the cursor
+	# to the previous 
+	nothing new under the cursor
+--- gg goes to the beginning of the file
+	G the end
+	2G: goes the the second line of the file
+--- \ to search
+	enter the string to search
+	n for next, N for previous
+--- o insert text at the next line
+	O insert newline above the cursor
+--- x and X deletes the char under cursor and go to the left of the cursor
+--- r to replace the char under cursor
+--- d to delete, can be combined with movement
+	dw: deletes the first word to the right of cursor
+	d2e: deletes the next two words
+--- . to repeat the previous command
+--- v goes to visual mode
+	e(and other movements) to select the word
+--- :w (save)
+	:q (quit)
+	:q! (quit without saving)
+	u for undo
+	ctrl + R for redo
+	
+--- vim -p file1 file2 file3 // it opens 3 tabs
+	:tabnew file4 // add a new tab
+	:tabn // go to next tab
+	:tabn 3
+	:tabc // close a tab
+	:tabr // to the first tab
+	:qa  // close all tabs and quit
+	:wqa  // save and quite
+	
+	
+
+
+----------------------------- g++ ------------------------	
+g++ hello.cpp -o hello // compiles hello.cpp and generate executable hello
+
+g++ -c hello.cpp
+g++ hello.o -o hello // this two-step process is equivalent to the above, -c compiles hello.cpp into object code, 
+//the second step links it with system libraries and produce executable
+
+g++ -g myprog.cpp -o myprog // -g enables it to be debugged with gdb debugger
+
+g++ -Wall myprog.cpp -o myprog // generates warnings about suspicious code
+
+g++ -Wall -g myprog -o myprog // a combination
+
+CC -fast myprog.cpp -o myprog // generate optimized code on a Solaris machine using Sun's own CC compiler, usually faster than g++ optimized code'
+
+g++ -O myprog.cpp -o myprog  // optimized code on linux machine
+
+g++ -E myprog.cpp > myprog.i  // stop at the end of preprocessing stage and print the preprocessed code into myprog.i
+g++ -S myprog.cpp > myprog.s  // print the assembly code
+
+g++ -save-temps main.cpp // store all the intermediate files
+// a.out main.cpp main.i main.s main.o
+
+g++ -Wall main.cpp -o main -l CPPfile // link with shared library CPPfile.so
+
+// for multiple files
+g++ file1.cpp file2.cpp -o myprog
+// or two step process
+g++ -c file1.cpp
+g++ -c file2.cpp
+g++ file1.o file2.o -o myprog
+
+
+
+--------------------------linux command--------------------------
+SSH secure shell
+^U delete line
+^C interrupt command
+^Z suspend command
+^D end of file // logging out?
+ps // see which processes are running
+ps -u <uid>// all processes owned by the user
+ps -ef // all processes on the system
+ps -ely // to see the size of all processes
+man ls // show the manual of ls
+ls -la /etc  // listing the files in /etc in long format
+cat -n file1 file2 file3 // show three files with line numbers
+ls *.cpp // list all cpp files
+// * any number of characters
+// ? single character
+// [ab] a or b
+cat file1 file2 file3 > all  // print all three files into all
+more -10 PnLs  // show a screen of PnLs, screen size is 10
+wc file // count the lines, chars in file. e.g., 1 12 56 file1.txt: 1 line, 12 words, 56 chars
+ls -1 | wc -l // count how many files are in the current directory
+ls -l // show files in long format, autor, time...
+// | pipeline, the output of ls is the input of wc
+--- sudo <command>  // super user do, gives sage elevated privileges
+	sudo -b // run the command in the background
+	sudo su  // will make you the super user
+--- syslogd daemon tracks the system information and saves it to specified log files
+--- //use ; to separate commands
+--- touch input.txt // it will update the modified time but not the content, creates the empty file if it doesn't exist
+--- uname -a // unix name, print detaled information about the machine 
+--- history  // shows the commands entered 
+--- mkdir
+--- chmod 777 abc.sh // 4 = read, 2 = write, 1 = execute, 7 = all .... change permission of a file
+--- chown  //  change file owner and group
+--- cal  /// shows the calendar of the present month, or "cal 02 1835"
+--- tar -zxvf abc.tar.gz 
+--- date --set='14 may 2013 13:57'  // only admin can do this 
+--- cp a/b/c/d.txt e/  // copy
+--- mv  // move, same syntax
+--- find ./ -type d -iname *pnl* // find in the current directory all the directories whose name contains pnl
+	/// -iname means 
+--- grep "word" file // search word in file
+	grep -r "aiusbg" dir // search all the files inside dir
+	-i // make it case insensitive
+--- man cat // manual page for command cat
+--- ps // show all the running processes
+	ps -A // show all the processes
+	ps -A | grep -i ssh  // search with the results of ps -A
+--- kill 1234 // kill the process with pid 1234
+	ps -A | grep -i apache2  // find the pid of apache2
+	pkill apache2 // or kill a process with its name
+--- whereis ls // shows the dir of the binary, sources and manual pages of the command ls
+--- service apache start/stop/restart
+--- alias ll='alias -l' // assign alias to a long and often used command
+	unalias ll // remove the alias
+	alias cd='ls -l' // anything can be an alias
+--- df // shows disk usage of file systems
+--- du // estimate file space usage in the current dir recursively
+--- rm file  // remove file
+	rm -rf dir // remove dir recursively
+--- echo asdf
+	echo "asdf"
+	echo 'asdf'  // all the same
+	// useful for interactive scripting
+--- echo "enter your name"
+	read name // reads the input and store it in variable name
+	echo "welcome to linux $name" // $name gives the content of variable name
+--- passwd // use to change password in terminal
+--- cmp a.txt b.txt // compares two files, returns 0 if identical, otherwise print the line number at first diff	
+--- wget // download from web
+--- tar
+	tar -cvf temp.tar temp/  // create a tar file from dir temp/
+	tar cvzf temp.tar.gz temp/  // z means zipped 
+	tar cvjf temp.tar.bz2 temp/   // j: highly compressed
+	
+	tar -xvf temp.tar -C dir   // untar the file and specify the target directory
+--- clear   // clear screen
+--- [command] [options] [arguments]  // note that options are before arguments
+--- less file.cpp   // shows part of the file, use space to go to next page, b to previous page
+--- head file.cpp // shows the first 10 lines of text, head -n 15 file.cpp
+--- tail file.cpp // shows the tail
+--- mkdir -p aa/bb/cc   // -p means creating all the intermediate directories, it creates aa, bb and cc
+--- && // command1 && command2: command2 will be executed only if command1 is successful
+--- || is logical or.  ; is just a seperator
+	$ false || echo "Oops, failed"
+	false; echo "this will always run"
+--- ln targetFile.txt link // link will be a hard link to targetFile.txt, basically another copy
+	-s makes link a synbolic link // it only points to another entry in the file system, can be directory
+	-f overrides if link exists // hard link cannot link 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
